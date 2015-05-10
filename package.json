@@ -1,0 +1,27 @@
+{
+  "name": "scheduler",
+  "version": "1.0.0",
+  "description": "A super simple Node.JS cron scheduler.",
+  "main": "lib/scheduler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/scheduler.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codyhazelwood/scheduler.git"
+  },
+  "author": "Cody Hazelwood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codyhazelwood/scheduler/issues"
+  },
+  "homepage": "https://github.com/codyhazelwood/scheduler",
+  "dependencies": {
+    "async": "^0.9.0",
+    "cron": "^1.0.5",
+    "lodash": "^2.4.1",
+    "minimist": "^1.1.1",
+    "moment": "^2.8.3"
+  }
+}
