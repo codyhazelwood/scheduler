@@ -1,0 +1,35 @@
+#!/usr/local/bin/node
+
+/*
+ *  runJob
+ *
+ *  A tool to help test scheduler jobs.  Runs the specified job immediately.
+ *
+ *  Usage:
+ *     ./runJob ./jobs/heartbeat.jobspec.js
+ *  - or -
+ *     node runJob ./jobs/heartbeat.jobspec.js
+ *
+ *  Copyright 2015 Cody Hazelwood
+ *
+ *  Released under the MIT license.
+ */
+
+'use strict';
+
+process.title = 'scheduler';
+
+function start() {
+    var filename = process.argv[2];
+
+    if (!filename) {
+        console.error('You must provide a filename!');
+        console.error('Usage:  ', process.argv[0], process.argv[1], './jobs/heartbeat.jobspec.js');
+    } else {
+        var job = require(filename);
+
+        job.onTick();
+    }
+}
+
+start();
